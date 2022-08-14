@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    align-items: center;
+    display: flex;
+    font-family: Tahoma;
+    height: 100vh;
+    justify-content: center;
+    width: 100%;
+}
+
+.container_calculator {
+    background-color: #A5C9CA;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px 0.5px gray;
+    padding: 10px;
+}
+
+.box_input {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.box_input>input {
+    border-radius: 5px;
+    border: none;
+    color: #2C3333;
+    display: block;
+    font-size: 32px;
+    font-weight: bold;
+    outline: none;
+    padding: 15px;
+    text-align: right;
+    width: 250px;
+}
+
+.box_input>input::placeholder {
+    color: #2C3333;
+}
+
+.box_btn {
+    column-gap: 5px;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    row-gap: 5px;
+    width: 250px;
+}
+
+.clr_btn {
+    background-color: #395B64;
+    color: #ffffff;
+}
+
+.result_btn {
+    background-color: #395B64;
+    color: #ffffff;
+    grid-column-end: span 2;
+    width: auto;
+}
+
+button {
+    background-color: #E7F6F2;
+    border-radius: 5px;
+    border: none;
+    color: #395B64;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    min-width: 58.5px;
+    padding: 18px 13px;
+    width: auto;
+}
+
+.overlay {
+    align-items: center;
+    backdrop-filter: blur(5px);
+    display: none;
+    height: 100vh;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+}
+
+.modal {
+    animation: modalanimate 0.6s ease-in;
+    background-color: #E7F6F2;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px 0.5px gray;
+    color: #2C3333;
+    display: none;
+    height: 150px;
+    padding: 15px 20px;
+    position: absolute;
+    width: 300px;
+    z-index: 1;
+}
+
+@keyframes modalanimate {
+    0% {
+        transform: scale(0%);
+    }
+
+    50% {
+        transform: scale(115%);
+    }
+
+    100% {
+        transform: scale(100%);
+    }
+}
+
+.modal>h2 {
+    margin: 15px 0;
+}
+
+.modal>input[type="button"] {
+    background-color: unset;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    right: 20px;
+}
